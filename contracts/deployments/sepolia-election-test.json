@@ -1,0 +1,56 @@
+{
+  "electionAddress": "0xA88aa3bB1754Cc5cE43D48e7374D8BdF802f7762",
+  "electionId": 1,
+  "transactions": {
+    "createElection": {
+      "hash": "0x75bfa75b949cd5ec656ebc6feab9dbe14ab56908e6d6d51365ed5cc84e1d908b",
+      "block": 11938502,
+      "gasUsed": "15432757"
+    },
+    "addCandidateA": {
+      "hash": "0x5e0e619a61d607afa0afc307c421f86fa3e0c3cf1ade496a98e3a5e1191d8d41",
+      "block": 11938503,
+      "gasUsed": "692183"
+    },
+    "addCandidateB": {
+      "hash": "0x8595f22692788ca4d120920373f5cd0be291357b0f95908592b0b61d7430e91a",
+      "block": 11938504,
+      "gasUsed": "594191"
+    },
+    "registerVoter": {
+      "hash": "0xd519939e2b4f557ed36669cf5a6c145d6dd41b0f6c3d56587f490a5d7d9ef637",
+      "block": 11938506,
+      "gasUsed": "464964"
+    },
+    "openRegistration": {
+      "hash": "0xf7b2e34a14ebda394e6d6843a31170618ee32b9346ed492ffb553fe30720d913",
+      "block": 11938508,
+      "gasUsed": "133550"
+    },
+    "startElection": {
+      "hash": "0x4e0b8bf205d5973b6810940101954618bacfefbb47d21fb44ef0f683432fc0d6",
+      "block": 11938521,
+      "gasUsed": "35675"
+    },
+    "castVote": {
+      "hash": "0x9561c8772b24c9c96f5abcf1d4c24d0cb446e247b87588d522198bbfe39bd2fe",
+      "block": 11938522,
+      "gasUsed": "366233"
+    },
+    "endElection": {
+      "hash": "0x8248ad93f7e6c8b2bc3d2347130f19dd7799f25028c64c3cf03cea1763e3413b",
+      "block": 11938523,
+      "gasUsed": "145684"
+    },
+    "finalizeResults": {
+      "hash": "0xc1c34196cf15bd34acb6133d37441bc65323c5cf95fad7f829398a1b966cd108",
+      "block": 11938524,
+      "gasUsed": "35651"
+    }
+  },
+  "results": {
+    "winnerId": 1,
+    "maxVotes": "1",
+    "totalVotes": "1"
+  }
+}

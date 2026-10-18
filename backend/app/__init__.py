@@ -1,0 +1,1 @@
+"""VOTEX backend application package."""

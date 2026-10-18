@@ -1,0 +1,5 @@
+"""Alembic migration versions.
+
+Domain schema migrations (elections, candidates, votes, ...) are added in
+later phases.
+"""

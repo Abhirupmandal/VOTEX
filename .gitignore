@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Build artifacts
+.next/
+out/
+dist/
+build/
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Hardhat
+artifacts/
+cache/
+typechain-types/
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+.playwright/
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+private_key*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# TypeScript
+*.tsbuildinfo

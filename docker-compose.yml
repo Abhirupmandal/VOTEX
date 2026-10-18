@@ -1,0 +1,42 @@
+# VOTEX local development stack.
+#
+# Brings up PostgreSQL and the FastAPI backend. The frontend is run separately
+# (npm run dev) during development; a production compose profile is added in a
+# later deployment phase.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: votex-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-votex}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-votex}
+      POSTGRES_DB: ${POSTGRES_DB:-votex}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - votex_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-votex} -d ${POSTGRES_DB:-votex}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+    container_name: votex-backend
+    restart: unless-stopped
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER:-votex}:${POSTGRES_PASSWORD:-votex}@postgres:5432/${POSTGRES_DB:-votex}
+      CHAIN_ID: ${CHAIN_ID:-31337}
+      RPC_URL: ${RPC_URL:-http://host.docker.internal:8545}
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  votex_pgdata:

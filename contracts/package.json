@@ -1,0 +1,29 @@
+{
+  "name": "votex-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VOTEX blockchain layer - Hardhat workspace (Phase 1 foundation)",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "testnet:preflight": "ts-node scripts/preflight.ts",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia",
+    "verify:sepolia": "ts-node scripts/verify-deployment.ts",
+    "smoke:sepolia": "hardhat run scripts/smoke-test.ts --network sepolia",
+    "demo:setup": "hardhat run scripts/demo-setup.ts --network localhost",
+    "seed:local": "hardhat run scripts/deploy.ts --network localhost && hardhat run scripts/demo-setup.ts --network localhost",
+    "export:abis": "hardhat run scripts/export-abis.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^20.14.0",
+    "hardhat": "^2.22.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "deployer": "0xE68F34C0CAcf0ca13C176440D607C6aa7E5c1964",
+  "deployedAt": "2026-10-18T03:15:23.962Z",
+  "startBlock": 11938337,
+  "contracts": {
+    "accessManager": {
+      "address": "0x32CcA7F2A1336e9160e2c1D76F9C3493C0f6F033",
+      "transactionHash": "0x6a65480b6d326cbc20cf6e2e9c2997d285ba54ce0798d8c510b6e39e78674d1f",
+      "blockNumber": 11938337
+    },
+    "voterRegistry": {
+      "address": "0x3C2482EdA3aaDa7EEeb07c937f1c2DAF7fedCeEc",
+      "transactionHash": "0x03b1cb0e3962ca2efdc709a7c324903defbfbd4f14cbbb10fdf5812c512931c7",
+      "blockNumber": 11938338
+    },
+    "electionFactory": {
+      "address": "0x27B6CBfCF0E909e2e4158A34b42e2904041312Be",
+      "transactionHash": "0x32c5f0d79df9e1b0ddaac1a71318d474dd03d9db177434ec8a12fe477f6e918c",
+      "blockNumber": 11938339
+    },
+    "emergencyController": {
+      "address": "0x6a381FCe8494c09D131d0F0467e83150801Ec526",
+      "transactionHash": "0x6aa0212a73ca7ff8ca25793ec755fab6a6d50fee833bcf1d68cf0ac2beb5f9a4",
+      "blockNumber": 11938340
+    }
+  },
+  "accessManager": "0x32CcA7F2A1336e9160e2c1D76F9C3493C0f6F033",
+  "voterRegistry": "0x3C2482EdA3aaDa7EEeb07c937f1c2DAF7fedCeEc",
+  "electionFactory": "0x27B6CBfCF0E909e2e4158A34b42e2904041312Be",
+  "emergencyController": "0x6a381FCe8494c09D131d0F0467e83150801Ec526"
+}
